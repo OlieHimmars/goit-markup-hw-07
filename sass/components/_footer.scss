@@ -1,0 +1,151 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: $sub-font-color;
+    color: $main-background-color;
+}
+
+.footer_container {
+    display: flex;
+    align-items: baseline;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer_title {
+    display: block;
+    margin-bottom: 20px;
+    @include text(14px, 700, 1.14, 00.03em);
+    text-transform: uppercase;
+    color: $main-background-color;
+}
+
+.footer_input {
+    padding-left: 16px;
+    width: 358px;
+    height: 50px;
+
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+
+    background-color: $sub-font-color;
+    
+    &::placeholder {
+        @include text(16px, 400, 1.25, 00.03em);
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+
+
+.footer_request {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 12px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+
+    @include text(16px, 700, 1.875, 00.06em);
+    color: $main-background-color;
+    background-color: $main-blue;
+}
+
+.footer_icon {
+    margin-left: 10px;
+    cursor: pointer;
+    fill: $main-background-color;
+}
+
+.address {
+    flex-grow: 1;
+    margin-right: 70px;
+}
+
+.address_logo {
+   @include logo($main-background-color);
+}
+
+.address_list {
+    @extend %list;
+    display: block;
+}
+
+.address_item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address_contacts {
+    margin-top: 20px;
+}
+
+.address_link {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    text-decoration: none;
+
+    @include text(14px, 400, 1.5, 0.03em);
+
+    transition: color 250ms $timing-function;
+
+    &--white {
+        color: inherit;
+    }
+    
+    &:hover, &:focus {
+        color: $main-blue;
+    }
+}
+
+.social {
+    margin-right: 93px;
+}
+
+.social_text {
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+    @include text(14px, 700, 1.14, 00.03em);
+    color: $main-background-color;
+}
+
+.social_list {
+    @extend %list;
+    justify-content: center;
+}
+
+.social_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color 250ms $timing-function;
+    &:hover,
+    &:focus {
+        background-color: $main-blue;
+    }
+}
+
+.social_item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social_icon {
+    width: 20px;
+    height: 20px;
+
+    fill: $main-background-color;
+}

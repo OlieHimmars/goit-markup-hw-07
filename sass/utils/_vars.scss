@@ -1,0 +1,64 @@
+$main-font-color: #212121;
+$secondary-font-color: #757575;
+$sub-font-color: #2F303A;
+$main-blue: #2196F3;
+$main-background-color: #fff;
+$main-dark: #000;
+$secondary-background-color: #f5f4fa;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+@mixin text($font-size, $weight, $line-height, $letter) {
+font-size: $font-size;
+font-weight: $weight;
+line-height: $line-height;
+letter-spacing: $letter;
+}
+
+@mixin visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+body {
+    color: $main-font-color;
+    font-family: 'Roboto', sans-serif;
+    background-color: $main-background-color;
+    font-size: 14px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+%list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
